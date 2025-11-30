@@ -6,7 +6,7 @@ body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to report this bug! Please fill out the information below to help us fix it.
+        Thanks for reporting this bug! Please provide the following information.
 
   - type: dropdown
     id: platform
@@ -24,88 +24,48 @@ body:
   - type: input
     id: version
     attributes:
-      label: PostPilot Version
-      description: Which version of PostPilot are you using? (e.g., 1.0.0)
+      label: Version
+      description: PostPilot version (e.g., 1.0.0)
       placeholder: "1.0.0"
-    validations:
-      required: true
-
-  - type: input
-    id: os-version
-    attributes:
-      label: Operating System Version
-      description: For desktop app users only (e.g., Windows 11, macOS 14.2, Ubuntu 22.04)
-      placeholder: "Windows 11"
-
-  - type: dropdown
-    id: feature-area
-    attributes:
-      label: Feature Area
-      description: Which part of PostPilot is affected?
-      options:
-        - API Client
-        - Database Client
-        - Data Inspector / JSON Viewer
-        - Collections & Organization
-        - Variables & Environment
-        - License & Authentication
-        - Installation & Updates
-        - Performance
-        - UI/UX
-        - Other
-    validations:
-      required: true
 
   - type: textarea
     id: description
     attributes:
-      label: Bug Description
-      description: A clear description of what the bug is
-      placeholder: Describe what happened and what you expected to happen
-    validations:
-      required: true
-
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce
-      description: How can we reproduce this issue?
+      label: Description
+      description: Describe the bug and how to reproduce it
       placeholder: |
+        ## Summary
+        A brief description of the issue.
+
+        ## Steps to Reproduce
         1. Go to '...'
         2. Click on '...'
-        3. Enter '...'
-        4. See error
+        3. See error
+
+        ## Expected Behavior
+        What you expected to happen.
+
+        ## Actual Behavior
+        What actually happened.
+
+        ## Additional Context
+        Screenshots, error messages, or any other helpful information.
+      value: |
+        ## Summary
+
+
+        ## Steps to Reproduce
+        1.
+        2.
+        3.
+
+        ## Expected Behavior
+
+
+        ## Actual Behavior
+
+
+        ## Additional Context
+
     validations:
       required: true
-
-  - type: textarea
-    id: expected
-    attributes:
-      label: Expected Behavior
-      description: What did you expect to happen?
-      placeholder: Describe the expected behavior
-    validations:
-      required: true
-
-  - type: textarea
-    id: actual
-    attributes:
-      label: Actual Behavior
-      description: What actually happened?
-      placeholder: Describe what actually happened
-    validations:
-      required: true
-
-  - type: textarea
-    id: screenshots
-    attributes:
-      label: Screenshots or Error Messages
-      description: If applicable, add screenshots or paste error messages
-      placeholder: Drag and drop images here or paste error messages
-
-  - type: textarea
-    id: additional
-    attributes:
-      label: Additional Context
-      description: Any other information that might help us fix this bug
-      placeholder: Browser version (for web), specific database type, API endpoint details, etc.
