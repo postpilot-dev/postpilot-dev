@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Support & Questions
+    url: mailto:anlac96.it@gmail.com
+    about: For general support or questions, please email us
+  - name: PostPilot Website
+    url: https://www.postpilot.dev
+    about: Visit our website for documentation and guides

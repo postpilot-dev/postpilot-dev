@@ -1,0 +1,97 @@
+name: Feature Request
+description: Suggest a new feature or improvement for PostPilot
+title: "[Feature]: "
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for suggesting a feature! We appreciate your input to make PostPilot better.
+
+  - type: dropdown
+    id: feature-area
+    attributes:
+      label: Feature Area
+      description: Which part of PostPilot would this feature affect?
+      options:
+        - API Client
+        - Database Client
+        - Data Inspector / JSON Viewer
+        - Collections & Organization
+        - Variables & Environment
+        - UI/UX
+        - Performance
+        - Integrations
+        - New Feature Area
+        - Other
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem Statement
+      description: What problem does this feature solve? What pain point are you experiencing?
+      placeholder: Describe the problem or use case this feature would address
+    validations:
+      required: true
+
+  - type: textarea
+    id: solution
+    attributes:
+      label: Proposed Solution
+      description: How would you like this feature to work?
+      placeholder: Describe your ideal solution
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What workarounds or alternative solutions have you considered?
+      placeholder: Describe any alternative approaches you've thought about
+
+  - type: textarea
+    id: use-case
+    attributes:
+      label: Use Case
+      description: Describe a specific scenario where this feature would be helpful
+      placeholder: |
+        Example workflow:
+        1. When working on...
+        2. I need to...
+        3. This feature would allow me to...
+
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: How important is this feature to your workflow?
+      options:
+        - Critical - Blocking my work
+        - High - Would significantly improve my workflow
+        - Medium - Nice to have
+        - Low - Just an idea
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      description: Which platform(s) should this feature support?
+      multiple: true
+      options:
+        - Desktop (Windows, macOS, Linux)
+        - Web
+        - Both Desktop and Web
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Any other information, mockups, screenshots, or examples
+      placeholder: Add any other context, screenshots, or examples of similar features in other tools
