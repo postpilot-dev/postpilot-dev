@@ -226,4 +226,4 @@ By using PostPilot, you agree to our:
 
 ---
 
-**© 2025 Lac Tran An. All rights reserved.**
+**© 2026 Lac Tran An. All rights reserved.**
