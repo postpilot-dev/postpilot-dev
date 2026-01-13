@@ -2,6 +2,32 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.3.3 - 2026-01-12
+
+### Improvements
+
+- **Database Connection Editing:** Leaving the password field empty will preserve the existing password; enter a new value only to update it.
+
+## 1.3.2 - 2026-01-12
+
+### Features
+
+- **Deleted Workspace Detection:** Automatically detects when a workspace folder has been moved or deleted, showing workspace status indicators and a warning dialog to switch to another workspace (Desktop version only).
+
+### Improvements
+
+- **Inline Workspace Rename:** Edit workspace names directly in the workspace switcher menu.
+
+## 1.3.1 - 2025-12-22
+
+### Features
+
+- **cURL Import:** Paste cURL commands directly into the HTTP Client URL input to automatically create a request with all headers, query parameters, and authentication from the cURL command.
+
+- **OpenAPI Spec Import:** Import OpenAPI 3.0 specification files to automatically generate HTTP request collections from your API definitions (Desktop version only).
+
+- **Custom HTTP Methods:** Added support for custom HTTP methods beyond the standard GET, POST, PUT, DELETE, allowing you to use any HTTP method your API requires.
+
 ## 1.3.0 - 2025-11-21
 
 ### Added
