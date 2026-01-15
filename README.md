@@ -2,7 +2,7 @@
 
 **Private Workspace for APIs, Databases, and Data Inspection**
 
-PostPilot is an API client, database client, and data inspector for developers and testers — all in one place. Your data stays local and private.
+PostPilot is an API client, database client, and data inspector — all in one place. Your data stays local and private.
 
 ---
 
