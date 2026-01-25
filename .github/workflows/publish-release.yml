@@ -1,0 +1,118 @@
+name: Publish Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: 'Version tag (e.g., v1.3.3). Leave empty to use latest tag from private repo'
+        required: false
+        type: string
+
+jobs:
+  publish-release:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Get version from private repo
+        id: get-version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRIVATE_REPO: ${{ vars.PRIVATE_REPO_NAME }}
+        run: |
+          # Use input version if provided, otherwise get latest tag from private repo
+          if [ -n "${{ inputs.version }}" ]; then
+            VERSION="${{ inputs.version }}"
+          else
+            # Get latest release tag from private repo
+            VERSION=$(gh api repos/$PRIVATE_REPO/releases/latest --jq '.tag_name')
+            if [ -z "$VERSION" ]; then
+              echo "Error: Could not fetch latest release from private repo"
+              exit 1
+            fi
+          fi
+
+          echo "version=$VERSION" >> $GITHUB_OUTPUT
+          echo "Using version: $VERSION"
+
+      - name: Fetch changelog from private repo release
+        id: fetch-changelog
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PRIVATE_REPO: ${{ vars.PRIVATE_REPO_NAME }}
+          VERSION: ${{ steps.get-version.outputs.version }}
+        run: |
+          # Fetch release notes from private repo
+          RELEASE_BODY=$(gh api repos/$PRIVATE_REPO/releases/tags/$VERSION --jq '.body')
+
+          if [ -z "$RELEASE_BODY" ]; then
+            echo "Error: Could not fetch release notes for version $VERSION"
+            exit 1
+          fi
+
+          # Save to temporary file
+          echo "$RELEASE_BODY" > /tmp/new-changelog.md
+          echo "Fetched changelog from private repo for version $VERSION"
+
+      - name: Update CHANGELOG.md
+        run: |
+          # Read the new changelog content
+          NEW_CONTENT=$(cat /tmp/new-changelog.md)
+
+          # Create temporary file with updated changelog
+          {
+            # Keep the header (first 3 lines)
+            head -n 3 CHANGELOG.md
+            echo ""
+            # Add new changelog entry
+            echo "$NEW_CONTENT"
+            echo ""
+            # Append existing changelog entries (skip first 3 lines)
+            tail -n +4 CHANGELOG.md
+          } > /tmp/updated-changelog.md
+
+          # Replace original file
+          mv /tmp/updated-changelog.md CHANGELOG.md
+
+          echo "CHANGELOG.md has been updated with new entry"
+
+      - name: Commit changelog changes
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+
+          git add CHANGELOG.md
+
+          # Check if there are changes to commit
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "docs: update CHANGELOG for ${{ steps.get-version.outputs.version }}"
+            git push
+            echo "CHANGELOG.md committed and pushed"
+          fi
+
+      - name: Create GitHub Release
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          VERSION: ${{ steps.get-version.outputs.version }}
+        run: |
+          # Read the changelog content for release notes
+          RELEASE_NOTES=$(cat /tmp/new-changelog.md)
+
+          # Create release
+          gh release create "$VERSION" \
+            --title "$VERSION" \
+            --notes "$RELEASE_NOTES" \
+            --draft=false \
+            --prerelease=false
+
+          echo "Release $VERSION created successfully"
+          echo "You can now manually upload the app file to: https://github.com/${{ github.repository }}/releases/tag/$VERSION"
