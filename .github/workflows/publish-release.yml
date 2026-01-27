@@ -24,7 +24,7 @@ jobs:
       - name: Get version from private repo
         id: get-version
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
           PRIVATE_REPO: ${{ vars.PRIVATE_REPO_NAME }}
         run: |
           # Use input version if provided, otherwise get latest tag from private repo
@@ -45,7 +45,7 @@ jobs:
       - name: Fetch changelog from private repo release
         id: fetch-changelog
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.PRIVATE_REPO_TOKEN }}
           PRIVATE_REPO: ${{ vars.PRIVATE_REPO_NAME }}
           VERSION: ${{ steps.get-version.outputs.version }}
         run: |

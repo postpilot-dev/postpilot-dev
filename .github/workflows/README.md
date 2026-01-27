@@ -9,17 +9,31 @@ This workflow automates the release publishing process by:
 
 ### Prerequisites
 
-Since you own both repositories, the workflow uses the automatic `GITHUB_TOKEN` - no personal access token needed!
+#### 1. Create a Personal Access Token (PAT)
 
-#### Add Repository Variable
+The workflow needs access to your private repository, which requires a PAT:
+
+1. Go to GitHub Settings > Developer settings > Personal access tokens > Tokens (classic)
+2. Click "Generate new token (classic)"
+3. Give it a name like "postpilot-release-workflow"
+4. Select scopes: **`repo`** (full control of private repositories)
+5. Click "Generate token" and copy the token value
+
+#### 2. Add Repository Secret
+
+1. Go to your repository Settings > Secrets and variables > Actions > Secrets tab
+2. Click "New repository secret"
+3. Name: `PRIVATE_REPO_TOKEN`
+4. Value: Paste your PAT from step 1
+5. Click "Add secret"
+
+#### 3. Add Repository Variable
 
 1. Go to your repository Settings > Secrets and variables > Actions > Variables tab
 2. Click "New repository variable"
 3. Name: `PRIVATE_REPO_NAME`
 4. Value: Your private repo in format `owner/repo-name` (e.g., `myusername/my-private-repo`)
 5. Click "Add variable"
-
-That's it! The workflow will automatically use your GitHub account's access to read from the private repo.
 
 ### Usage
 
@@ -41,19 +55,24 @@ The workflow will:
 
 ### Troubleshooting
 
+**Error: "gh: Not Found (HTTP 404)"**
+- Verify the `PRIVATE_REPO_TOKEN` secret is set correctly with a valid PAT
+- Ensure the PAT has `repo` scope enabled
+- Check that the `PRIVATE_REPO_NAME` variable is correct (format: `owner/repo-name`)
+- Verify you have access to the private repository
+
 **Error: "Could not fetch latest release from private repo"**
 - Verify the `PRIVATE_REPO_NAME` variable is correct (format: `owner/repo-name`)
 - Check that the private repo has at least one release
-- Ensure you have access to the private repository with your GitHub account
+- Ensure your PAT has access to the private repository
 
 **Error: "Could not fetch release notes for version X"**
 - Verify the version tag exists in the private repository
 - Check that the release has content in its body
 
 **Error: "Resource not accessible by integration"**
-- This means the automatic `GITHUB_TOKEN` doesn't have access to the private repo
-- Make sure you own both repositories under the same GitHub account
-- If the repos are under different accounts, you'll need to use a Personal Access Token instead
+- This means the `PRIVATE_REPO_TOKEN` doesn't have sufficient permissions
+- Regenerate your PAT with the `repo` scope enabled
 
 **No changes to commit**
 - The changelog entry already exists in CHANGELOG.md
