@@ -2,6 +2,21 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.3.4 - 2026-01-27
+
+### Features
+
+- **Enhanced Database Query Results:** View your query results in a cleaner, more organized table with adjustable column widths to fit your data perfectly.
+
+### Enhancements
+
+- **Better Data Editing Experience:** Improved tables for environment variables, query parameters, and headers with easier editing and cleaner layouts that adapt to your screen size.
+
+- **Multi-line Variable Support:** Environment variable values now support multiple lines of text for better handling of long values like API keys or JSON configurations.
+
+- **Compare API Responses:** Previous responses are now preserved when executing new requests, allowing you to use compare mode for analyzing changes in your JSON path queries.
+
+
 ## 1.3.3 - 2026-01-12
 
 ### Improvements
