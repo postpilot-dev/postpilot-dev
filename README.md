@@ -93,6 +93,37 @@ Pick up right where you left off. Your workspace of APIs, queries, and variables
 2. Make it executable: `chmod +x PostPilot-x.x.x.AppImage`
 3. Run the AppImage: `./PostPilot-x.x.x.AppImage`
 
+#### Verifying Linux Releases (Recommended)
+
+All Linux releases are signed with GPG and include SHA256 checksums for security verification.
+
+**Step 0: Import our GPG signing key (do once)**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/postpilot-dev/postpilot-dev/main/linux/postpilot-linux-signing-public.asc | gpg --import
+```
+
+**Step 1: Download the release files**
+
+From the [Releases](../../releases) page, download:
+- `PostPilot_1.x.x_amd64.AppImage` (the application)
+- `PostPilot_1.x.x_amd64.AppImage.asc` (GPG signature)
+- `PostPilot_1.x.x_amd64.AppImage.sha256` (checksum file)
+
+**Step 2: Verify the GPG signature and SHA256 checksum**
+
+```bash
+# Verify GPG signature
+gpg --verify PostPilot_1.x.x_amd64.AppImage.asc PostPilot_1.x.x_amd64.AppImage
+
+# Verify SHA256 checksum
+sha256sum -c PostPilot_1.x.x_amd64.AppImage.sha256
+```
+
+You should see:
+- `Good signature from "Lac Tran An (PostPilot.Dev Linux Release Signing Key) <anlac96.it@gmail.com>"`
+- `PostPilot_1.x.x_amd64.AppImage: OK`
+
 ---
 
 ## Pricing
