@@ -2,6 +2,17 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.3.5 - 2026-01-30
+
+### Enhancements
+
+- **Enhanced JSON Path Navigation:** Click on any value in the JSON tree to automatically navigate to its path in the breadcrumb, with a copy button to quickly copy the current path.
+
+### Fixes
+
+- **Linux Compatibility:** Fixed compilation errors on Linux systems.
+
+
 ## 1.3.4 - 2026-01-27
 
 ### Features
