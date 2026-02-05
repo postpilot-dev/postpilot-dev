@@ -2,6 +2,13 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.3.6 - 2026-02-04
+
+### Features
+
+- **Data Preview for Query Results:** Visualize query results directly as images, PDFs, or tables without leaving the inspector. Supports Base64 and byte array formats, auto-detects the preview type, and lets you toggle between raw and rendered views on the fly.
+
+
 ## 1.3.5 - 2026-01-30
 
 ### Enhancements
