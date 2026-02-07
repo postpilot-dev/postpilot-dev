@@ -2,6 +2,25 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.3.7 - 2026-02-04
+
+### Features
+
+- **OpenAPI Import — Naming Strategy:** Choose naming for imported requests: *By Summary* (summary/operationId) or *By URI* (e.g. `/users/{id}`).
+
+- **Tab Rename from Context Menu:** Right-click any tab to rename it.
+
+### Enhancements
+
+- **HTTP Method Icon in Tab:** Tabs now show the HTTP method icon (GET, POST, etc.).
+
+- **Save Database Query Result View Type:** Your view type (Table/JSON) is saved into workspace.
+
+### Fixes
+
+- **Variable Value Input Height:** Fixed text area height limit for long values.
+
+
 ## 1.3.6 - 2026-02-04
 
 ### Features
