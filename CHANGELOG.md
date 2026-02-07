@@ -2,7 +2,7 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
-## 1.3.7 - 2026-02-04
+## 1.3.7 - 2026-02-07
 
 ### Features
 
