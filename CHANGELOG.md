@@ -2,6 +2,29 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.3.8 - 2026-02-17
+
+### Features
+
+- **Quick Save Shortcut:** Press Ctrl+S (Cmd+S on Mac) to instantly save your current tab.
+
+- **Database Schema Persistence:** Database schemas now reload automatically when reopening a saved database client kit, so you don't have to reconnect each time.
+
+### Enhancements
+
+- **Refreshed UI & Accessibility:** Updated color palette with improved contrast and better keyboard navigation throughout the app.
+
+- **Empty Query Results Display:** Table view now displays properly even when your query returns zero results, making it clear the query executed successfully.
+
+- **Duplicate Variable Detection:** Get instant feedback when creating a variable name that already exists, preventing accidental overwrites.
+
+### Fixes
+
+- **Environment Variable Editing:** Fixed an issue where environment variables wouldn't update correctly after editing.
+
+- **Example Loading:** Fixed example data not loading properly on first use.
+
+
 ## 1.3.7 - 2026-02-07
 
 ### Features
