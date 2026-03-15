@@ -2,6 +2,23 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.3.9 - 2026-03-15
+
+### Features
+
+- **Variable Highlight in Request Body:** The code editor for request bodies now supports variable highlighting, autocomplete, and preview. Type `{{` to see suggestions, and click any variable to view or edit its value.
+
+- **Multiple Request Body Types:** Choose from form-data, URL-encoded, raw (JSON, XML, Text), or binary body types. cURL import and OpenAPI import now detect and set the correct body type automatically.
+
+- **Cancel In-Flight Requests:** Stop a running HTTP request at any time by clicking the cancel button.
+
+- **Auth Inheritance:** Requests can now inherit authentication from the collection level.
+
+### Enhancements
+
+- **Improved Network Error Diagnostics:** Specific error types (Connection Refused, DNS Error, Timeout, TLS Error) when API requests fail, with runtime details and OS-level codes.
+
+
 ## 1.3.8 - 2026-02-17
 
 ### Features
