@@ -2,6 +2,19 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.3.10 - 2026-03-19
+
+### Enhancements
+
+- **OpenAPI Import — Smarter Auth Handling:** Collection auth is set to the most-used scheme in the spec; individual requests only override when their auth differs or is explicitly public.
+
+- **OpenAPI Import — Broader `$ref` Support:** Headers and query parameters defined as `$ref` components are now correctly resolved during import.
+
+- **Enable/Disable Query Parameters:** Toggle individual query parameters on or off without removing them, making it easier to test different combinations.
+
+- **Variable Preview Always Editable:** Variable previews can now be edited at any time without opening the environment editor.
+
+
 ## 1.3.9 - 2026-03-15
 
 ### Features
