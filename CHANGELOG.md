@@ -2,6 +2,21 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.0 - 2026-03-24
+
+### Features
+
+- **Refreshed Interface:** Redesigned with a bento-grid layout and sky-blue accent palette — distinct zones for header, sidebar, and content panels make the workspace easier to orient at a glance, while keeping the same information density you rely on.
+
+### Enhancements
+
+- **Active Environment Persisted:** The selected environment is now saved and restored automatically, so you pick up right where you left off when reopening a workspace.
+
+- **OpenAPI Import Settings Remembered:** Folder strategy and request naming are now saved as preferences for the next time you import.
+
+- **Query Kit Input Persisted:** The input text of a query kit is now saved and restored when you reopen it.
+
+
 ## 1.3.10 - 2026-03-19
 
 ### Enhancements
