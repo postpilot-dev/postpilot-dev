@@ -2,6 +2,23 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.1 - 2026-03-27
+
+### Features
+
+- **Settings Tab:** A new Settings tab lets you configure the application to your liking. Adjust the base font size to suit your display and reading preferences.
+
+- **Font Size Keyboard Shortcuts:** Use `Cmd +` / `Cmd -` (or `Ctrl +` / `Ctrl -` on Windows/Linux) to increase or decrease the font size without leaving the keyboard.
+
+- **JSON Comments in Request Body:** You can now write comments (`//` and `/* */`) inside JSON request bodies. Comments are stripped automatically before the request is sent, so your JSON stays valid without cluttering the editor.
+
+### Enhancements
+
+- **Query Panel Always Visible:** The query section in the API client and database client is now always shown alongside the response — review query definitions and planned variable extraction before sending a request. The panel can be collapsed to a thin strip when you need more space.
+
+- **Tab Flash on Re-click:** Clicking an already-active tab now briefly highlights it, confirming your click was registered without switching context.
+
+
 ## 1.4.0 - 2026-03-24
 
 ### Features
