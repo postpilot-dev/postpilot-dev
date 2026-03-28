@@ -133,7 +133,7 @@ You should see:
 - **14-day free trial** — full features, no credit card required
 - **Perpetual license** — pay once, own forever
 - **1 year of updates included** — after that, keep using your version or optionally renew for new features
-- **1 device license** — tied to your hardware via device fingerprint
+- **1 device license** — tied to your hardware
 
 **What's included:**
 - API client with full HTTP support
@@ -150,12 +150,11 @@ You should see:
 ## License & Privacy
 
 ### License Requirements
-The desktop version requires a valid license with periodic online verification. Your license is verified using a device fingerprint to prevent unauthorized use. After the 14-day trial, you'll need to purchase a license ($40 one-time). See our [Terms of Service](https://www.postpilot.dev/terms-of-service) for details.
+The desktop version requires a valid license with periodic online verification. After the 14-day trial, you'll need to purchase a license ($40 one-time). See our [Terms of Service](https://www.postpilot.dev/terms-of-service) for details.
 
 ### Data Privacy
 - **Your data stays local**: All workspace data is stored on your device's file system
 - **No cloud sync**: We don't collect or access your workspace data
-- **Device fingerprint**: For license verification only, we collect a cryptographic hash of your hardware information
 - **Optional telemetry**: Anonymous usage metrics can be opted out at any time
 
 Read our full [Privacy Policy](https://www.postpilot.dev/privacy-policy) for more information.
@@ -202,7 +201,7 @@ Your license never expires. After 1 year, you can continue using your current ve
 
 ### Can I use PostPilot on multiple devices?
 
-The $40 license is for 1 device. Each license is tied to your device's hardware fingerprint. If you need to use PostPilot on multiple devices, you'll need a separate license for each device.
+The $40 license is for 1 device. If you need to use PostPilot on multiple devices, you'll need a separate license for each device.
 
 ### What if I change my computer?
 
