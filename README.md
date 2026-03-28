@@ -4,6 +4,8 @@
 
 PostPilot is an API client, database client, and data inspector — all in one place. Your data stays local and private.
 
+https://github.com/user-attachments/assets/2e79ac10-d969-49ec-9297-7e83b3153b31
+
 ---
 
 ## Download Desktop App
