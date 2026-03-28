@@ -2,6 +2,33 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.2 - 2026-03-28
+
+### Features
+
+- **Draggable Table Rows:** Reorder query parameters and headers by dragging rows up or down — no more cutting and pasting to rearrange.
+
+- **Quick Variable Creation:** Referencing an undefined variable in your request now offers to create it on the spot, so you no longer need to open the environment editor first.
+
+- **Postman Collection Import:** Import a Postman Collection v2.1 JSON file into PostPilot Desktop. Folder structure, requests, headers, query params, body, and auth are preserved automatically.
+
+- **Environment Link Button:** A new link button in the environment bar lets you jump directly to the environment editor from the request view.
+
+- **Expand Query Section on Icon Click:** Clicking the header, query, or variable icon now expands the query section automatically, saving an extra click.
+
+### Enhancements
+
+- **Always-Visible New Row:** An empty row is always present at the bottom of headers, query parameters, and body fields — just start typing to add a new entry without clicking an "Add" button first.
+
+- **Smoother Tab Scrolling:** The tab bar scrolls by 30 % per click and snaps to the active tab, making it easier to navigate long tab lists.
+
+- **Bento Layout for DB and HTTP Results:** The database client and HTTP client result panels now use the same bento-grid layout introduced in 1.4.0 for a consistent look.
+
+### Fixes
+
+- **Query Panel State Preserved:** Hiding and re-showing the query panel no longer resets its contents.
+
+
 ## 1.4.1 - 2026-03-27
 
 ### Features
