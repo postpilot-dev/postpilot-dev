@@ -2,6 +2,21 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.3 - 2026-03-30
+
+### Features
+
+- **Data Preview in JSON Source:** You can now preview JSON data directly in the source panel — switch between Raw and Preview modes using the new toggle in the toolbar. Supports table, pdf and image.
+
+### Enhancements
+
+- **Reorganized JSON Source Toolbar:** Toolbar controls are now grouped into logical sections — input, source type, preview, format, search and settings.
+
+### Fixes
+
+- **Database Connection:** URL-encoded username and password to prevent authentication errors when credentials contain special characters.
+
+
 ## 1.4.2 - 2026-03-28
 
 ### Features
