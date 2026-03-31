@@ -2,6 +2,17 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.4 - 2026-03-31
+
+### Features
+
+- **Binary Response Preview:** When an API returns binary data (`application/octet-stream`), auto-detects the content type and displays it correctly: PDF, image, or hex dump.
+
+- **Hex Dump Viewer:** Renders binary data as offset, hex bytes, and ASCII columns — first 4 KB shown with "Load more" for larger payloads.
+
+- **Ctrl+S to Save Collection:** Press Ctrl+S to save the current collection without reaching for the toolbar.
+
+
 ## 1.4.3 - 2026-03-30
 
 ### Features
