@@ -2,6 +2,19 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.5 - 2026-04-05
+
+### Features
+
+- **Font Size Scaling:** The editor, sidebar, and all panels now scale uniformly when you change the font size in Settings — no more mismatched text sizes across the UI.
+
+### Fixes
+
+- **Auth Type Field:** Fixed a bug where a deprecated `authType` field was incorrectly re-initialized on load, which could reset authentication settings.
+
+- **Variable Extraction:** Fixed a race condition where running a kit with multiple extraction queries could corrupt the environment variable storage. All queries now complete first, then variables are saved in a single write.
+
+
 ## 1.4.4 - 2026-03-31
 
 ### Features
