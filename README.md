@@ -1,76 +1,56 @@
 # PostPilot
 
-**Private Workspace for APIs, Databases, and Data Inspection**
+Stop switching between Postman, DB tools, and JSON viewers.
 
-PostPilot is an API client, database client, and data inspector — all in one place. Your data stays local and private.
+## Why I built this
+
+I kept doing this all day:
+
+- Call API → get response
+- Copy ID
+- Open DB tool → paste → query
+- Go back to API → repeat
+
+Too much context switching. Too much copy-paste.
+
+So I built PostPilot to keep everything in one flow.
 
 https://github.com/user-attachments/assets/a759e944-c214-4c7a-95f5-134420f69963
 
 ---
 
-## Download Desktop App
+## Download
 
-### Free 14-Day Trial
+### Free 14-Day Trial — no credit card required
 
-Try the full desktop version with no limitations for 14 days:
+| Platform | File | Requirement |
+|----------|------|-------------|
+| Windows | `PostPilot-Setup-x.x.x.exe` | Windows 10 or later |
+| macOS | `PostPilot-x.x.x.dmg` | macOS 10.15 or later |
+| Linux | `PostPilot-x.x.x.AppImage` | Ubuntu 18.04+, Fedora 32+ |
 
-- **Windows**: `PostPilot-Setup-x.x.x.exe` (Windows 10 or later)
-- **macOS**: `PostPilot-x.x.x.dmg` (macOS 10.15 or later)
-- **Linux**: `PostPilot-x.x.x.AppImage` (Ubuntu, Debian, Fedora)
-
-> **Note**: See the [Releases](../../releases) page for all available versions and detailed release notes.
+> See the [Releases](../../releases) page for all versions and release notes.
 
 ---
 
 ## Features
 
-### Zero Cloud Lock — Fully Local
-Work offline with full privacy. All requests, queries, and data live safely on your device — no cloud sync delays or hidden uploads. Faster iteration, stronger security, and total control of your workflow.
-
-### All Your Dev Tools in One Place
-API + DB + JSON in a single workspace. Send API requests, query databases, and inspect data side by side. Stop context-switching between apps — stay focused and ship faster.
-
-### Reuse, Automate & Iterate
-Build smarter workflows that scale. Define reusable variables, group requests, and resume work instantly. Spend less time rebuilding and more time refining your next breakthrough.
-
-### Lightweight & Distraction-Free
-A fast, minimal workspace built for flow. Instant startup and clean UI with zero bloat. Stay in the zone without tool overhead or mental drag.
-
-### Share Meaningful Snapshots
-Show results, not confusion. Highlight responses, queries, and metadata — share instantly in bug reports or chats. Collaborate faster with less "I don't see what you see."
-
-### Never Lose Context
-Pick up right where you left off. Your workspace of APIs, queries, and variables stays intact across sessions. Eliminate mental reload — keep clarity from one day to the next.
+- **Fully Local** — Work offline with full privacy. All requests, queries, and data live safely on your device.
+- **All in One Place** — API client, database client, and JSON/XML inspector in a single workspace.
+- **Variables & Collections** — Define reusable variables, group requests, and resume your workspace where you left off.
+- **Lightweight** — Fast startup, minimal UI, no bloat.
 
 ---
 
 ## What You Can Do
 
-### API Testing
-- Set up API requests with method, URL, headers, and body
-- Send requests and receive responses instantly
-- Inspect responses with PostPilot JSON Viewer & Query
-- Extract and reuse variables from API responses
-- Save and reuse requests anytime
-
-### Database Query
-- Connect to databases and run SQL queries
-- Browse database metadata
-- Extract and reuse variables from query results
-- Save and reuse queries anytime
-
-### Data Inspection
-- Import JSON/XML from API requests, clipboard, or file
-- Format and validate JSON/XML data instantly
-- Search by key or value with ease
-- Run multiple JSONPath queries simultaneously
-- Save and reuse queries anytime
-
-### Private Workspace
-- Organize APIs, database queries, and queries in collections
-- Manage variables across your workspace
-- Resume your workspace anytime
-- Fully local and private - your data stays with you
+| Feature | Details |
+|---------|---------|
+| **API Testing** | Send HTTP requests (method, URL, headers, body)<br>Inspect responses with built-in JSON viewer<br>Extract and reuse values from responses as variables<br>Save and organize requests in collections |
+| **Database Query** | Connect to PostgreSQL, MySQL, SQLite and more<br>Run SQL queries and browse table metadata<br>Extract values from results as variables<br>Save and reuse queries |
+| **Data Inspection** | Import JSON/XML from clipboard, file, or API response<br>Format, validate, and search by key or value<br>Run multiple JSONPath queries at once |
+| **Environment & Variables** | Define variables at workspace or environment scope<br>Reference variables across API requests and queries<br>Switch environments without rewriting requests |
+| **Private Workspace** | All data stored locally on your device<br>No cloud sync, no account required<br>Workspace persists across sessions |
 
 ---
 
@@ -78,181 +58,156 @@ Pick up right where you left off. Your workspace of APIs, queries, and variables
 
 ### Windows
 1. Download `PostPilot-Setup-x.x.x.exe`
-2. Run the installer
-3. Follow the installation wizard
-4. Launch PostPilot from your Start menu or desktop shortcut
+2. Run the installer and follow the wizard
+3. Launch from Start menu or desktop shortcut
 
 ### macOS
 1. Download `PostPilot-x.x.x.dmg`
-2. Open the DMG file
-3. Drag PostPilot to your Applications folder
-4. Launch PostPilot from Applications
+2. Open the DMG, drag PostPilot to Applications
+3. Launch from Applications
 
-> **Note**: If you see a security warning, go to System Preferences → Security & Privacy and click "Open Anyway"
+> If you see a security warning: System Preferences → Security & Privacy → "Open Anyway"
 
 ### Linux
 1. Download `PostPilot-x.x.x.AppImage`
-2. Make it executable: `chmod +x PostPilot-x.x.x.AppImage`
-3. Run the AppImage: `./PostPilot-x.x.x.AppImage`
+2. `chmod +x PostPilot-x.x.x.AppImage`
+3. `./PostPilot-x.x.x.AppImage`
 
-#### Verifying Linux Releases (Recommended)
+<details>
+<summary>Verify Linux release (recommended)</summary>
 
-All Linux releases are signed with GPG and include SHA256 checksums for security verification.
+All Linux releases are signed with GPG and include SHA256 checksums.
 
-**Step 0: Import our GPG signing key (do once)**
-
+**Import signing key (once):**
 ```bash
 curl -fsSL https://raw.githubusercontent.com/postpilot-dev/postpilot-dev/main/linux/postpilot-linux-signing-public.asc | gpg --import
 ```
 
-**Step 1: Download the release files**
-
-From the [Releases](../../releases) page, download:
-- `PostPilot_1.x.x_amd64.AppImage` (the application)
-- `PostPilot_1.x.x_amd64.AppImage.asc` (GPG signature)
-- `PostPilot_1.x.x_amd64.AppImage.sha256` (checksum file)
-
-**Step 2: Verify the GPG signature and SHA256 checksum**
-
+**Verify:**
 ```bash
-# Verify GPG signature
 gpg --verify PostPilot_1.x.x_amd64.AppImage.asc PostPilot_1.x.x_amd64.AppImage
-
-# Verify SHA256 checksum
 sha256sum -c PostPilot_1.x.x_amd64.AppImage.sha256
 ```
 
-You should see:
+Expected output:
 - `Good signature from "Lac Tran An (PostPilot.Dev Linux Release Signing Key) <anlac96.it@gmail.com>"`
 - `PostPilot_1.x.x_amd64.AppImage: OK`
+
+</details>
 
 ---
 
 ## Pricing
 
-**Desktop Pro — $40 (One-Time Payment)**
+**Desktop Pro — $40 one-time**
 
-- **14-day free trial** — full features, no credit card required
-- **Perpetual license** — pay once, own forever
-- **1 year of updates included** — after that, keep using your version or optionally renew for new features
-- **1 device license** — tied to your hardware
+- 14-day free trial, no credit card required
+- Perpetual license — pay once, own forever
+- 1 year of updates included
+- 1 device license
 
-**What's included:**
-- API client with full HTTP support
-- Database client (PostgreSQL, MySQL, SQLite, etc.)
-- Advanced data inspector and JSON/XML viewer
-- Environment variables and collections
-- Offline/local workspace
-- All future updates for 1 year
-
-> **After 1 year:** Your license never expires. Keep using your current version forever, or optionally upgrade to get the latest features and improvements.
+After 1 year: keep using your current version forever, or optionally renew for new features.
 
 ---
 
 ## License & Privacy
 
-### License Requirements
-The desktop version requires a valid license with periodic online verification. After the 14-day trial, you'll need to purchase a license ($40 one-time). See our [Terms of Service](https://www.postpilot.dev/terms-of-service) for details.
+**License**: The desktop app requires periodic online verification. After the 14-day trial, a $40 license is required. See [Terms of Service](https://www.postpilot.dev/terms-of-service).
 
-### Data Privacy
-- **Your data stays local**: All workspace data is stored on your device's file system
-- **No cloud sync**: We don't collect or access your workspace data
-- **Optional telemetry**: Anonymous usage metrics can be opted out at any time
-
-Read our full [Privacy Policy](https://www.postpilot.dev/privacy-policy) for more information.
-
----
-
-## System Requirements
-
-**Minimum Requirements:**
-- **Windows**: Windows 10 or later (64-bit)
-- **macOS**: macOS 10.15 (Catalina) or later
-- **Linux**: Ubuntu 18.04 or later, Fedora 32 or later (or equivalent)
-- **RAM**: 4 GB
-- **Disk Space**: 200 MB
-- **Internet**: Required for license verification and updates
-
-**Recommended:**
-- **RAM**: 8 GB or more
+**Privacy**: All workspace data is stored on your device. No cloud sync. Anonymous telemetry is opt-out. See [Privacy Policy](https://www.postpilot.dev/privacy-policy).
 
 ---
 
 ## Getting Started
 
-1. Download and install PostPilot for your platform
-2. Launch the app — your **14-day free trial** starts automatically
-3. Start creating API requests, database queries, or inspecting data
-4. Organize your work in collections
-5. Use variables to automate and reuse values across requests
-6. After 14 days, purchase a license ($40) to continue using all features
+1. Download and install for your platform
+2. Launch — your 14-day free trial starts automatically
+3. Create API requests, database queries, or inspect data
+4. Use variables and collections to organize your work
+5. After 14 days, purchase a $40 license to keep going
 
-For detailed guides and documentation, visit [www.postpilot.dev](https://www.postpilot.dev)
+Docs and guides: [www.postpilot.dev](https://www.postpilot.dev)
 
 ---
 
 ## Frequently Asked Questions
 
-### How does the 14-day trial work?
+<details>
+<summary>How does the 14-day trial work?</summary>
 
-When you first launch the desktop app, your 14-day trial starts automatically. No credit card required. You get full access to all features. After 14 days, you'll need to purchase a $40 license to continue using the app.
+Starts automatically on first launch. No credit card required. Full access to all features. After 14 days, purchase a $40 license to continue.
 
-### What happens after 1 year?
+</details>
 
-Your license never expires. After 1 year, you can continue using your current version indefinitely. Updates are optional — if you want the latest features, you can renew for another year of updates.
+<details>
+<summary>What happens after 1 year?</summary>
 
-### Can I use PostPilot on multiple devices?
+Your license never expires. Keep using your current version indefinitely. Renew only if you want new features and updates.
 
-The $40 license is for 1 device. If you need to use PostPilot on multiple devices, you'll need a separate license for each device.
+</details>
 
-### What if I change my computer?
+<details>
+<summary>Can I use PostPilot on multiple devices?</summary>
 
-Contact us at anlac96.it@gmail.com if you need to transfer your license to a new device (e.g., hardware upgrade, new computer).
+The $40 license covers 1 device. You'll need a separate license for each additional device.
 
-### Do I need an internet connection?
+</details>
 
-The desktop app requires periodic online verification to validate your license. Once verified, you can work offline.
+<details>
+<summary>What if I change my computer?</summary>
 
-### Is my data secure and private?
+Email anlac96.it@gmail.com to transfer your license to a new device.
 
-Yes! All your workspace data is stored locally on your device's file system. We never collect or access your API requests, database queries, or any sensitive data. See our [Privacy Policy](https://www.postpilot.dev/privacy-policy) for details.
+</details>
 
-### Can I get a refund?
+<details>
+<summary>Do I need an internet connection?</summary>
 
-Our refund policy is as displayed at time of purchase. Since PostPilot is downloadable software with a 14-day free trial, we encourage you to fully evaluate the app during the trial period before purchasing.
+The app requires periodic online verification for license validation. After that, you can work fully offline.
 
----
+</details>
 
-## Support & Feedback
+<details>
+<summary>Is my data secure and private?</summary>
 
-- **Website**: [www.postpilot.dev](https://www.postpilot.dev)
-- **Issues**: Report bugs or request features via [GitHub Issues](../../issues)
-- **Email**: anlac96.it@gmail.com
+Yes. All workspace data is stored locally. We never access your API requests, queries, or any sensitive data. See [Privacy Policy](https://www.postpilot.dev/privacy-policy).
+
+</details>
+
+<details>
+<summary>Can I get a refund?</summary>
+
+Since PostPilot has a 14-day free trial, we encourage you to fully evaluate before purchasing. Refund policy is as displayed at time of purchase.
+
+</details>
 
 ---
 
 ## Looking for a Free Alternative?
 
-If you don't need the database client or offline features, try our **[free web version](https://www.postpilot.dev/workspace)** — works right in your browser with API testing and data inspection capabilities.
+Try the **[free web version](https://www.postpilot.dev/workspace)** — no install, works in your browser.
 
-**Web Standard (Free Forever):**
-- ✅ API client (REST, GraphQL)
-- ✅ Data inspector / response viewer
-- ✅ Environment variables (saved in browser)
-- ✅ No account required, fully local
-- ❌ No database client
-- ❌ No offline mode
+| | Web (Free) | Desktop Pro ($40) |
+|--|--|--|
+| API client | ✅ | ✅ |
+| Data inspector | ✅ | ✅ |
+| Environment variables | ✅ | ✅ |
+| Database client | ❌ | ✅ |
+| Offline mode | ❌ | ✅ |
+| No account required | ✅ | ✅ |
 
-**System Requirements:**
-- Modern web browser (Chrome, Firefox, Safari, Edge)
-- JavaScript enabled
-- LocalStorage enabled
+---
+
+## Support
+
+- **Website**: [www.postpilot.dev](https://www.postpilot.dev)
+- **Issues**: [GitHub Issues](../../issues)
+- **Email**: anlac96.it@gmail.com
 
 ---
 
 ## Legal
 
-By using PostPilot, you agree to our:
 - [Terms of Service](https://www.postpilot.dev/terms-of-service)
 - [Privacy Policy](https://www.postpilot.dev/privacy-policy)
 
