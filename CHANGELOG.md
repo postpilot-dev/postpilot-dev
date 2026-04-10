@@ -2,6 +2,19 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.6 - 2026-04-10
+
+### Features
+
+- **Table View:** Click any table or collection in the database sidebar to open a data preview. Loads 200 rows by default, with "Load More" to fetch the next page. Click a cell to inspect its full value in a side panel.
+
+- **SQL Query Autocomplete:** The SQL editor now suggests keywords, table names, and column names as you type. Suggestions are schema-aware — tables come from your loaded schema tree, and column names are fetched on demand. Typing `alias.` resolves the alias to its table and suggests matching columns.
+
+### Enhancements
+
+- **Collapsible Query Panel for Raw Data Kit:** The query section in the raw data query kit is now always visible alongside the result — collapse it to a thin strip when you need more space.
+
+
 ## 1.4.5 - 2026-04-05
 
 ### Features
