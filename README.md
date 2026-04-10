@@ -1,6 +1,6 @@
 # PostPilot
 
-Stop switching between Postman, DB tools, and JSON viewers.
+Stop switching between API client, DB tools, and JSON viewers.
 
 ## Why I built this
 
