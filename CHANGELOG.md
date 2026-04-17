@@ -2,6 +2,31 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.7 - 2026-04-17
+
+### Features
+
+- **Response Headers Tab:** Added Headers tab to The HTTP response panel.
+
+- **Drag-to-Reorder Collections:** Drag and drop collections in the sidebar to arrange them in any order. The order is saved automatically and restored on every app restart.
+
+- **Tab State Persistence:** Open tabs and the active tab are saved automatically and fully restored when you reopen the app or reload the workspace.
+
+- **Request Timeout:** Set a custom timeout per HTTP request or configure a global default in Settings. Requests that exceed the limit are automatically cancelled.
+
+### Enhancements
+
+- **Preview Type Selector:** Choose how to view response results directly inside the result panel — switch between available preview formats without leaving the current tab.
+
+### Fixes
+
+- **SQL Autocomplete Dropdown Hidden:** Fixed an issue where the table and column suggestion dropdown from the SQL editor was clipped and not fully visible.
+
+- **File Drop on Read-Only JSON Viewer:** Fixed an issue where files could be dragged and dropped onto a JSON Viewer that is not in edit mode.
+
+- **Workspace Creation After Delete:** Fixed an issue where deleting the active workspace left the app in a broken state, making it impossible to add or create a new workspace.
+
+
 ## 1.4.6 - 2026-04-10
 
 ### Features
