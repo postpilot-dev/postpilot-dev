@@ -2,6 +2,29 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.4.8 - 2026-04-20
+
+### Features
+
+- **Multi-Database Support per Connection:** A single database connection can now span multiple databases on the same server. Browse and query all accessible databases without creating a separate connection entry for each one.
+
+- **Tab Management:** A new dropdown menu on the tab bar lets you manage your open tabs. Closing tabs with unsaved changes now shows a confirmation dialog to prevent accidental data loss.
+
+- **Ctrl+Enter Shortcut:** Press Ctrl+Enter to quickly execute HTTP requests, database queries without reaching for the mouse.
+
+- **Auto-Detect Source Type on Paste:** Pasting content into the Data viewer automatically detects and selects the correct source type (XML, JSON, etc.).
+
+- **Create Collection While Saving a Kit:** When saving a kit, you can now create a new collection directly from the save popup without leaving the flow.
+
+### Enhancements
+
+- **Copy Button in Preview:** The copy button is now embedded inside the Monaco editor preview, making it easier to copy content without reaching outside the panel. A tooltip label is also added for clarity.
+
+### Fixes
+
+- **HTTP Request Timeout Unsaved:** Fixed an issue where kits created before the timeout feature was added were incorrectly marked as unsaved due to a default timeout value of -1.
+
+
 ## 1.4.7 - 2026-04-17
 
 ### Features
