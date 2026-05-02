@@ -2,6 +2,29 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.5.0 - 2026-05-02
+
+### Features
+
+- **MongoDB Autocomplete:** Get instant suggestions for collection names and database methods as you type in the query editor.
+
+- **MongoDB Write Operations:** Full support for document modifications including `insertOne`, `insertMany`, `updateOne`, `updateMany`, `deleteOne`, and `deleteMany`.
+
+- **MongoDB Method Chaining:** Support for chaining methods like `.limit()`, `.sort()`, `.skip()`, `.hint()`, and `.maxTimeMS()` directly on your queries for advanced data manipulation.
+
+- **MongoDB Query Warnings:** A new warning system that detects redundant or inefficient query parameters, helping you optimize your MongoDB queries.
+
+- **Destructive Operation Safety:** To prevent accidental data loss, the "Run" button dynamically turns red when a delete operation is detected in your MongoDB query.
+
+### Enhancements
+
+- **MongoDB Query Guide:** The interactive query guide has been updated with detailed examples for write operations, chained methods, and advanced query options.
+
+### Fixes
+
+- **Shortcut Interference:** Fixed a bug where the `Ctrl+Enter` shortcut would only trigger for the most recently opened tab, failing to execute in previously opened but currently active tabs.
+
+
 ## 1.4.8 - 2026-04-20
 
 ### Features
