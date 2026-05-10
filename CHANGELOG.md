@@ -2,6 +2,27 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.5.1 - 2026-05-03
+
+### Features
+
+- **Sequence Flow Kit:** A new kit type that lets you chain multiple kits into a sequence and run them in order. Each step's result is shown in a dedicated results panel, making it easy to test multi-step workflows end to end. Flow kits appear in the side menu and can be saved and re-opened across sessions.
+
+- **Resolved Request Inspection:** You can now view the exact cURL command or SQL query that was executed, with all variables fully resolved, directly from the new Sent Request and Sent Query popovers in the response viewer.
+
+### Enhancements
+
+- **Multi-line MongoDB Queries:** The editor autocomplete and backend execution now fully support formatting MongoDB queries across multiple lines, making it easier to read and chain methods like `.limit()` and `.skip()`.
+
+- **HTTP Kit Icon:** The HTTP kit no longer defaults its icon to the GET method, giving you a neutral starting point when creating a new request.
+
+### Fixes
+
+- **Table View Query:** Fixed an issue where table view could not load data, as a side effect of the multi-database connection feature.
+
+- **Collection Tab Save:** Fixed an issue where saving and closing a Collection tab would mistakenly prompt to save a new kit instead of saving the collection authentication settings.
+
+
 ## 1.5.0 - 2026-05-02
 
 ### Features
