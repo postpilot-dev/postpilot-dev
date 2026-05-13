@@ -2,6 +2,23 @@
 
 Stay updated with the latest features, improvements, and fixes for our PostPilot. Check out our changelog for version updates and enhancements!
 
+## 1.5.2 - 2026-05-12
+
+### Enhancements
+
+- **Sequence Flow Kits in Web:** Added support for saving and managing Sequence Flow kits in the web version of the application.
+
+### Fixes
+
+- **Compare Mode Diff:** Fixed an issue in Compare Mode where the diff would incorrectly retain an "empty" state instead of showing the true difference between consecutive requests.
+
+- **Sequence Flow Kit Saving:** Fixed a bug where newly created collections were unable to save sequence flow kits.
+
+- **Tab List Scrolling:** Fixed an issue where the right-scroll button would incorrectly persist even when the tab list was fully scrolled to the end.
+
+- **Kit Ordering:** Fixed an issue where the custom display order of folders and kits within a collection was not correctly loaded and restored when opening the app.
+
+
 ## 1.5.1 - 2026-05-03
 
 ### Features
